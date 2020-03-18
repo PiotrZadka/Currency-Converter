@@ -1,12 +1,18 @@
 import React from 'react'
 import { TextInput, StyleSheet } from 'react-native'; 
 
-const InputField = ({ placeholder, editable }) =>{
+const InputField = ({ placeholder, editable, getValue }) =>{
+
+    const handleTextChange = ( value ) =>{
+        getValue(value)
+    }
+
     return(
         <TextInput 
             style = {styles.inputtext}
             placeholder = {placeholder}
             editable = {editable}
+            onChangeText = {handleTextChange}
         />
     )
 }
