@@ -1,20 +1,25 @@
 import React from 'react'
-import { TextInput } from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { TextInput, StyleSheet } from 'react-native'; 
 
-const InputField = ({ placeholder }) =>{
+const InputField = ({ placeholder, editable }) =>{
     return(
         <TextInput 
-            style={{
-                width: 200, 
-                height: 40, 
-                borderColor: 'black', 
-                borderWidth: 0.5,  
-                fontSize: 20
-            }}
+            style = {styles.inputtext}
             placeholder = {placeholder}
+            editable = {editable}
         />
     )
 }
 
+const styles = StyleSheet.create({
+    inputtext: {
+        width: 200, 
+        height: 40, 
+        borderColor: 'black', 
+        borderWidth: 0.5,  
+        fontSize: 20
+    },
+});
+
 export default InputField
+

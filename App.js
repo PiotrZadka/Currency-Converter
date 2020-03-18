@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import {Text, StyleSheet, View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import ConvertButton from './Components/ConvertButton'
@@ -8,9 +8,10 @@ import InputField from './Components/InputField'
 export default function App() {
   return (
     <View style={styles.container}>
+      <Text style = {{height: 40, fontSize: 20}} >{"Currency Converter"}</Text>
       <InputField placeholder = {"Currency"}/>
       <ConvertButton title={"Convert"}/>
-      <InputField placeholder = {"Converted"}/>
+      <InputField placeholder = {"Converted"} editable = {false}/>
     </View>
   );
 }
